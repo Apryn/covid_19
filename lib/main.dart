@@ -1,4 +1,5 @@
-import 'package:covid_19/screen/home_screen.dart';
+import 'package:covid_19/screen/home/home_screen.dart';
+import 'package:covid_19/theme.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(const MyApp());
@@ -8,8 +9,15 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home:  HomeScreen(),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: "Covid_19",
+      theme: ThemeData(
+          fontFamily: "Poppins",
+          scaffoldBackgroundColor: kBackgroundColor,
+          textTheme:
+              const TextTheme(bodyText1: TextStyle(color: kBodyTextColor))),
+      home: const HomeScreen(),
     );
   }
 }

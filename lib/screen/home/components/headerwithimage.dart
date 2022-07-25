@@ -5,7 +5,13 @@ import 'myclipper.dart';
 class HeaderwithImage extends StatelessWidget {
   const HeaderwithImage({
     Key? key,
+    required this.image,
+    required this.toptext,
+    required this.bottomtext,
   }) : super(key: key);
+  final String image;
+  final String toptext;
+  final String bottomtext;
 
   @override
   Widget build(BuildContext context) {
@@ -39,16 +45,16 @@ class HeaderwithImage extends StatelessWidget {
             child: Stack(
               children: [
                 Image.asset(
-                  "assets/images/Drcorona.png",
+                  image,
                   width: 200,
                   fit: BoxFit.fitWidth,
                   alignment: Alignment.topCenter,
                 ),
                 Positioned(
                     top: 20,
-                    left: 120,
+                    left: 125,
                     child: Text(
-                      "All you need \nis Stay at Home",
+                      "$toptext \n$bottomtext",
                       style: kHeadingTextStyle.copyWith(color: Colors.white),
                     )),
                 Container()

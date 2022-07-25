@@ -12,7 +12,11 @@ class HomeScreen extends StatelessWidget {
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(children: [
-            const HeaderwithImage(),
+            const HeaderwithImage(
+              image: "assets/images/Drcorona.png",
+              toptext: "All you need",
+              bottomtext: "is Stay at Home",
+            ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Container(

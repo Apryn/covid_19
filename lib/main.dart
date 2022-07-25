@@ -1,3 +1,4 @@
+import 'package:covid_19/screen/Info/info_screen.dart';
 import 'package:covid_19/screen/home/home_screen.dart';
 import 'package:covid_19/theme.dart';
 import 'package:flutter/material.dart';
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
           scaffoldBackgroundColor: kBackgroundColor,
           textTheme:
               const TextTheme(bodyText1: TextStyle(color: kBodyTextColor))),
-      home: const HomeScreen(),
+      home: const InfoScreen(),
     );
   }
 }

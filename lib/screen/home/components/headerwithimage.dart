@@ -1,3 +1,4 @@
+import 'package:covid_19/screen/Info/info_screen.dart';
 import 'package:covid_19/theme.dart';
 import 'package:flutter/material.dart';
 import 'myclipper.dart';
@@ -31,7 +32,11 @@ class HeaderwithImage extends StatelessWidget {
           Align(
             alignment: Alignment.topRight,
             child: IconButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return const InfoScreen();
+                }));
+              },
               icon: const Icon(Icons.menu),
               color: Colors.white,
             ),
@@ -41,7 +46,7 @@ class HeaderwithImage extends StatelessWidget {
           ),
           Expanded(
               child: Container(
-            padding: const EdgeInsets.symmetric(horizontal: 30),
+            padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Stack(
               children: [
                 Image.asset(
